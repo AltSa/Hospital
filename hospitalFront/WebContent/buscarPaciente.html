@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<meta charset="ISO-8859-1">
+<title>Buscar Paciente</title>
+<script type="text/javascript" src=js/angular.min.js></script>
+<script type="text/javascript" src=js/script.js></script>
+</head>
+<body ng-controller="controladorBody">
+<h2>Ingrese el id del paciente que desea buscar</h2>
+
+<form >
+	<input type="number" ng-model="idPaciente" placeholder="id del paciente"/>
+	
+	<button ng-click="buscarPaciente(this)">Buscar</button>
+</form><br>
+
+<table border="1px solid">
+	<tr>
+		<td>nombre</td>
+		<td>apellido</td>
+		<td>edad</td>
+		<td>causa</td>
+	</tr>
+
+	<tr>
+		<td>{{nombrePaciente}}</td>
+		<td>{{apellidoPaciente}}</td>
+		<td>{{edadPaciente}}</td>
+		<td>{{causaPaciente}}</td>
+	</tr>
+
+</table>
+
+</body>
+</html>
